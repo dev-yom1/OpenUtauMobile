@@ -1,0 +1,41 @@
+name: Android ARM64 Development APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Development APK version label
+        required: true
+        default: 0.0.0-dev
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    name: Prepare development build number
+    runs-on: ubuntu-latest
+    outputs:
+      build_number: ${{ steps.build_number.outputs.value }}
+    steps:
+      - name: Calculate build number
+        id: build_number
+        shell: bash
+        env:
+          RUN_NUMBER: ${{ github.run_number }}
+        run: echo "value=$((RUN_NUMBER + 20000))" >> "$GITHUB_OUTPUT"
+
+  android-arm64:
+    name: Android ARM64 development APK
+    needs: prepare
+    uses: ./.github/workflows/build-android.yml
+    with:
+      version: ${{ inputs.version }}
+      build_number: ${{ fromJSON(needs.prepare.outputs.build_number) }}
+      source_sha: ${{ github.sha }}
+      action_run_id: ${{ github.run_id }}
+      arch: arm64
+      rid: android-arm64
+      release_signing: false
+    secrets: {}
