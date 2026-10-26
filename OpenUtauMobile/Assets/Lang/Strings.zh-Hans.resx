@@ -658,6 +658,9 @@
   <data name="Editor.More" xml:space="preserve">
     <value>更多</value>
   </data>
+  <data name="Editor.ResizeSplit" xml:space="preserve">
+    <value>拖动以调整编辑区域大小</value>
+  </data>
   <data name="Editor.Quantize" xml:space="preserve">
     <value>量化（全局）</value>
   </data>

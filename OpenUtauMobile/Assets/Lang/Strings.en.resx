@@ -658,6 +658,9 @@
   <data name="Editor.More" xml:space="preserve">
     <value>More</value>
   </data>
+  <data name="Editor.ResizeSplit" xml:space="preserve">
+    <value>Drag to resize the editing areas</value>
+  </data>
   <data name="Editor.Quantize" xml:space="preserve">
     <value>Quantize (Global)</value>
   </data>

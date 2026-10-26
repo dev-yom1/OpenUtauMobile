@@ -118,7 +118,7 @@
                       Width="{x:Static local:ViewConstants.EditorSplitHandleWidth}"
                       Height="{x:Static local:ViewConstants.EditorSplitHandleHeight}"
                         RenderTransformOrigin="0.5,0.5"
-                      ToolTip.Tip="拖拽调整编辑区布局"
+                      ToolTip.Tip="{DynamicResource Editor.ResizeSplit}"
                       IsHitTestVisible="True">
                     <Path
                         Data="M 0,12

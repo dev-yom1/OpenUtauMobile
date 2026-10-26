@@ -658,6 +658,9 @@
   <data name="Editor.More" xml:space="preserve">
     <value>その他</value>
   </data>
+  <data name="Editor.ResizeSplit" xml:space="preserve">
+    <value>ドラッグして編集領域の高さを調整</value>
+  </data>
   <data name="Editor.Quantize" xml:space="preserve">
     <value>クオンタイズ（グローバル）</value>
   </data>

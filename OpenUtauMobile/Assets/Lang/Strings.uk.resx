@@ -581,6 +581,9 @@
   <data name="Editor.More" xml:space="preserve">
     <value>Ще</value>
   </data>
+  <data name="Editor.ResizeSplit" xml:space="preserve">
+    <value>Перетягніть, щоб змінити розмір областей редагування</value>
+  </data>
   <data name="Editor.Quantize" xml:space="preserve">
     <value>Квантування (глобальне)</value>
   </data>
